@@ -5,7 +5,8 @@ mongoose.set('useFindAndModify', false);
 
 var userSchema = new Schema({
     name: String,
-    email_username: String,
+    username: String,
+    email: String,
     password: String
 }, {collection:'users'});
 

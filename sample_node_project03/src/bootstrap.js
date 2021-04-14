@@ -2,10 +2,11 @@
  * Boots the app
  */
  const mongoose = require('mongoose');
+ const PORT = process.env.PORT || 5000;
 
 // connect to the database cluster
 mongoose.connect('mongodb+srv://root:root@cluster0.ijro3.mongodb.net/sample_node_project03?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
-    console.log('connected...');
+    console.log('database connected...');
 }).catch((err) => {
     console.log(err.message);
 });
@@ -17,9 +18,9 @@ router = require('./routes');
 module.exports = (app, router) => {
 
     appRouter(router);
-    app.listen(5000, ()=>{ 
+    app.listen(PORT, ()=>{ 
         
-        console.log('server running');
+        console.log(`server running on port: ${PORT}`);
     
     });
 
