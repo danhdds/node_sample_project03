@@ -1,23 +1,13 @@
 usersModel = require('../models/userModel');
 
-exports.getUserController = (req, res) => {
+exports.renderMainUserPage = (req, res) => {
 
-    var userDatabase = usersModel.getUserFromDatabase();
-    let user = [];
-
-    //console.log("user real from controller: "+ usersDataBase);
-    userDatabase.then(function (result) {
-
-        for (i in result) {
-
-            user = result[i];
-
-            //console.log(allUsersDatabase[0]);
-        } // end for
-
-        res.render('index', { user: user });
-
-    });
-
+    res.render('index');
 
 } // exports.getDebtController
+
+exports.getUserBoardController = (req, res) => {
+
+    res.status(200).send("User Content.");
+
+};

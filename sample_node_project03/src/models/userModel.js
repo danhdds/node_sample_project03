@@ -1,13 +1,5 @@
 const User = require('../database/User.js');
 
-exports.getUserFromDatabase = async (req, res) => {
-
-    let user = () => (User.find({}).exec());
-    try { return ({ "user": await user() }); }
-    catch (e) { console.log(e) }
-
-}
-
 exports.checkUsernameAndEmail = (req, res, next) => {
     
     User.findOne({
@@ -33,11 +25,12 @@ exports.checkUsernameAndEmail = (req, res, next) => {
             }
 
             if (user) {
-                res.status(400).send({ message: "Falha email já em uso!" });
+                res.status(400).send({ message: "Falha, email já em uso!" });
                 return;
             }
 
             next();
+
         });
     });
 

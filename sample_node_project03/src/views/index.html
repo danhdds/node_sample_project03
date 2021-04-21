@@ -1,19 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/main.css">
-    <title>Comic characters Marvel App</title>
-</head>
-<body>
-    <div class="container">
-        
-            <h4>Usuáro: <%= user[0].name %></h4>
-            <span>Username: <%= user[0].username%></span><br>
-            <span>Username: <%= user[0].email%></span><br>
-            <span>Senha: <%= user[0].password%></span>
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/public/css/main.css">
+        <title>Comic characters Marvel App</title>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="login-wrap">
+
+                <form id="login-form" autocomplete="off">
+
+                    <label for="loginUsername">Nome de usuário:</label><br>
+                    <input type="text" name="loginUsername"><br>
+                    <label for="loginPassword">Senha:</label><br>
+                    <input type="password" name="loginPassword"><br>
+                    <input type="submit" name="action" value="Log in" />
+
+                </form><!-- end form -->
+
+            </div><!-- end sign-up -->
+
+            <div class="sign-up-wrap">
+
+                <form id="sign-up-form" autocomplete="off">
+                    
+                    <label for="name">Nome:</label><br>
+                    <input type="text" name="name" /><br>
+
+                    <label for="username">Nome de usuário:</label><br>
+                    <input type="text" name="username"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="text" name="email"><br>
+
+                    <label for="password">Senha:</label><br>
+                    <input type="password" name="password"><br>
+                    <input type="submit" name="action" value="Criar novo usuário" />
+
+                </form><!-- end form -->
+
+            </div><!-- end sign-up -->
+
+
+        </div><!-- end container -->
+
+        <script src="/public/js/jquery.js"></script>
+        <script src="/public/js/main.js"></script>
+    </body>
 </html>

@@ -22,6 +22,14 @@ var corsOptions = {
 // set cors middlewares
 app.use(cors(corsOptions));
 
+app.use(function(req, res, next) {
+    res.header(
+      "Access-Control-Allow-Headers",
+      "x-access-token, Origin, Content-Type, Accept"
+    );
+    next();
+});
+
 // create express router
 const router = express.Router();
 app.use(router);
