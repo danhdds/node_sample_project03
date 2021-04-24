@@ -43,7 +43,7 @@ $(() => {
         let email = form.find("input[name='email']").val();
         let password = form.find("input[name='password']").val();
 
-        console.log(name);
+        //console.log(name);
 
         let url = '/signup';
 

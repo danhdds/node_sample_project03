@@ -1,17 +1,17 @@
 const User = require('../database/User.js');
 
-exports.checkUsernameAndEmail = (req, res, next) => {
+exports.checkUsernameAndEmail = (req, res, next, callback) => {
     
     User.findOne({
         username: req.body.username
     }).exec((err, user) => {
         if (err) {
-            res.status(500).send({ message: err });
+            callback(null, err, null);
             return;
         }
 
         if (user) {
-            res.status(400).send({ message: "Falha! nome de usuário já cadastrado!" });
+            callback(user);
             return;
         }
 
@@ -19,13 +19,14 @@ exports.checkUsernameAndEmail = (req, res, next) => {
         User.findOne({
             email: req.body.email
         }).exec((err, user) => {
+            
             if (err) {
-                res.status(500).send({ message: err });
+                callback(null, err, null);
                 return;
             }
 
             if (user) {
-                res.status(400).send({ message: "Falha, email já em uso!" });
+                callback(null, null, user);
                 return;
             }
 

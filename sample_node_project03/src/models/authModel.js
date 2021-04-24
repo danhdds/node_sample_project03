@@ -1,9 +1,7 @@
 const User = require('../database/User.js');
-const bcrypt = require('bcryptjs');
-const jwt = require("jsonwebtoken");
-const config = require("../config/authConfig");
 
-exports.signup = (req, res) => {
+
+exports.signup = (req, res, callback) => {
 
     const user = new User({
 
@@ -17,17 +15,17 @@ exports.signup = (req, res) => {
     user.save(err => {
 
         if (err) {
-            res.status(500).send({ message: err });
+            callback(err, false);
             return;
         }
-
-        res.send({ message: "Usuário cadastrado com sucesso!" });
+        
+        callback(null, true);
     
     });
 
 }; // end signup
 
-exports.signin = (req, res) => {
+exports.signin = (req, res, callback) => {
     
     User.findOne({
 
@@ -36,38 +34,17 @@ exports.signin = (req, res) => {
     }).exec((err, user) => {
 
             if (err) {
-                res.status(500).send({ message: err });
+                callback(err, null);
                 return;
             }
 
             if (!user) {
-                return res.status(404).send({ message: "Usuário não encontrado!" });
+                callback(null, user);
+                return;
             }
 
-            var isValidPassword = bcrypt.compareSync(
-                req.body.loginPassword,
-                user.password
-            );
-
-            if (!isValidPassword) {
-                return res.status(401).send({
-                    accessToken: null,
-                    message: "Senha inválida!"
-                });
-            }
-
-            var token = jwt.sign({ id: user.id }, config.secret, {
-                expiresIn: 86400 // 24 hours
-            });
-
-            res.set('x-access-token', token);
-
-            res.status(200).send({
-                id: user._id,
-                username: user.username,
-                email: user.email,
-                accessToken: token
-            });
+            callback(null, user);
+            return;
 
         });
 
