@@ -1,5 +1,6 @@
 usersController = require('../controllers/usersController');
 authController = require('../controllers/authController');
+characterController = require('../controllers/characterController');
 const { verifySignUp } = require('../middlleware/index');
 const { authJwt } = require("../middlleware/index");
 
@@ -19,5 +20,15 @@ exports.appRouter = router => {
     );
 
     router.post('/signin', authController.signinUserController);
+
+    router.get('/get-characters', characterController.getMarvelCharacters);
+
+    router.get('/edit-user',
+       [authJwt.verifyToken], 
+       usersController.editUser);
+
+    router.post('/edit-user',
+       [authJwt.verifyToken], 
+       usersController.upateUser);
 
 }; // end exports.appRouter

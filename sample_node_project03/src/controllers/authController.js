@@ -58,6 +58,7 @@ exports.signinUserController = (req, res) => {
 
             res.status(200).send({
                 id: user._id,
+                name: user.name,
                 username: user.username,
                 email: user.email,
                 accessToken: token
