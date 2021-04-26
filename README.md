@@ -1,4 +1,4 @@
-# node_sample_projects
+# Simple Marvel App
 
 Dependencies and modules:  express, mongoose, ejs, cors, jsonwebtoken, bcryptjs, node-fetch
 - Linguagem: JavaScript
