@@ -6,16 +6,29 @@ exports.renderMainUserPage = (req, res) => {
 
 } // exports.getDebtController
 
-exports.getUserBoardController = (req, res) => {
+exports.getUserBoardCharactersController = (req, res) => {
 
     //res.status(200).send("User Content."); // test auth
-    res.render('userboard/index', {});
+    res.render('userboard/characters', {});
+
+};
+
+exports.getUserBoardComicsController = (req, res) => {
+
+    //res.status(200).send("User Content."); // test auth
+    res.render('userboard/comics', {});
 
 };
 
 exports.editUser = (red, res) => {
 
     res.render('userboard/editUser', {});
+
+}
+
+exports.getUserFavoritesBoard = (req, res) => {
+
+    res.render('userboard/favorites', {});
 
 }
 
@@ -170,3 +183,39 @@ exports.upateUser = (req, res, next) => {
     } // end if
 
 } // end upateUser
+
+exports.getUserFavCharacters = (req, res) => {
+
+    userModel.getFavoriteCharacters(req, res, function (err, characters) {
+
+        if (err) {
+            res.status(500).send({ message: err });
+            return;
+        }
+
+        if (characters){
+            res.send({ characters });
+            return;
+        }
+
+    });
+
+} // end getUserFavCharacters
+
+exports.getUserFavComics = (req, res) => {
+
+    userModel.getFavoriteComics(req, res, function (err, comics) {
+
+        if (err) {
+            res.status(500).send({ message: err });
+            return;
+        }
+
+        if (comics){
+            res.send({ comics });
+            return;
+        }
+
+    });
+
+} // end getUserFavComics

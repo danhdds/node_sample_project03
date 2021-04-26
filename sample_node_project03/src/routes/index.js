@@ -10,18 +10,30 @@ exports.appRouter = router => {
 
     router.get('/', usersController.renderMainUserPage);
 
-    router.get('/user-board', 
-        [authJwt.verifyToken], 
-        usersController.getUserBoardController);
-
     router.post('/signup',
         [
-          verifySignUp.checkDuplicateUsernameOrEmail
+            verifySignUp.checkDuplicateUsernameOrEmail
         ],
         authController.singUpNewUserController
     );
 
     router.post('/signin', authController.signinUserController);
+
+    router.get('/edit-user',
+        [authJwt.verifyToken],
+        usersController.editUser);
+
+    router.post('/edit-user',
+        [authJwt.verifyToken],
+        usersController.upateUser);
+
+    router.get('/user-board-characters',
+        [authJwt.verifyToken],
+        usersController.getUserBoardCharactersController);
+
+    router.get('/user-board-comics',
+        [authJwt.verifyToken],
+        usersController.getUserBoardComicsController);
 
     router.get('/get-comics', comicControler.getMarvelComics);
 
@@ -31,12 +43,25 @@ exports.appRouter = router => {
 
     router.post('/get-character', characterController.getMarvelCharacter);
 
-    router.get('/edit-user',
-       [authJwt.verifyToken], 
-       usersController.editUser);
+    router.post('/add-character-tofav',
+        [authJwt.verifyToken],
+        characterController.addCharacterToFavorites);
 
-    router.post('/edit-user',
-       [authJwt.verifyToken], 
-       usersController.upateUser);
+    router.post('/add-comic-tofav',
+        [authJwt.verifyToken],
+        comicControler.addComicToFavorites);
+
+    router.get('/favorites',
+        [authJwt.verifyToken],
+        usersController.getUserFavoritesBoard);
+
+    router.post('/user-fav-chars',
+        [authJwt.verifyToken],
+        usersController.getUserFavCharacters);
+
+    router.post('/user-fav-comics',
+        [authJwt.verifyToken],
+        usersController.getUserFavComics);
+
 
 }; // end exports.appRouter

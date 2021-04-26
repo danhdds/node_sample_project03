@@ -136,3 +136,73 @@ exports.updateUserDetails = (req, res, callback) => {
     });
 
 } // end updateUserDetails
+
+exports.addCharacterToFavorites = (req, res, callback) => {
+
+    update = {
+        $push: { characters: req.body.character }
+    };
+
+    User.findByIdAndUpdate(req.body.id, update, function (err, result) {
+        if (err) {
+            callback(err, null);
+            //console.log(err);
+        } else {
+            callback(null, result);
+            //console.log(result);
+        }
+    });
+
+}
+
+exports.addComicToFavorites = (req, res, callback) => {
+
+    update = {
+        $push: { comics: req.body.comic }
+    };
+
+    User.findByIdAndUpdate(req.body.id, update, function (err, result) {
+        if (err) {
+            callback(err, null);
+            //console.log(err);
+        } else {
+            callback(null, result);
+            //console.log(result);
+        }
+    });
+
+}
+
+exports.getFavoriteCharacters = (req, res, callback) => {
+
+    User.findById(req.body.id).exec((err, user) => {
+        if (err) {
+            callback(err, null);
+            return;
+        }
+
+        if (user) {
+            callback(null, user.characters);
+            return;
+        }
+
+    });
+
+} // end getFavoriteCharacters
+
+exports.getFavoriteComics = (req, res, callback) => {
+
+    User.findById(req.body.id).exec((err, user) => {
+        if (err) {
+            callback(err, null);
+            return;
+        }
+
+        if (user) {
+            callback(null, user.comics);
+            return;
+        }
+
+    });
+
+} // end getFavoriteCharacters

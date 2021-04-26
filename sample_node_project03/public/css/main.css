@@ -130,7 +130,7 @@ form {
     display:none;
 }
 
-.all-characters {
+.all-characters, .all-comics {
     visibility: hidden;
     list-style-type: none;
     padding: 0;
@@ -146,11 +146,15 @@ form {
     border-bottom: 1px solid #ddd;
 }
 
-.all-characters li:last-child {
+::placeholder {
+    font-size: 12px;
+}
+
+.all-characters li:last-child, .all-comics li:last-child {
     border-bottom: 0px;
 }
 
-.all-characters li {
+.all-characters li, .all-comics li {
     border: 1px solid #ddd;
     margin-top: -1px;
     background-color: #ffffff;
@@ -162,11 +166,11 @@ form {
     cursor: pointer;
 }
 
-.all-characters li:hover:not(.header) {
+.all-characters li:hover:not(.header), .all-comics li:hover:not(.header){
     background-color: #eee;
 }
 
-.character-info {
+.character-info, .comic-info {
     padding: 7%;
 }
 
@@ -174,8 +178,7 @@ form {
     margin-bottom: 10px;
 }
 
-.button {
-    width: 100px;
+.add-to-fav, .button, .view-button {
     height: 26px;
     margin-top: 5px;
     margin-bottom: 13px;
@@ -186,6 +189,18 @@ form {
     cursor: pointer;
 }
 
-.button:hover {
+.add-to-fav {
+    width: 160px;
+}
+
+.button {
+    width: 100px;
+}
+
+.view-button {
+    width: 200px;
+}
+
+.button:hover, .add-to-fav:hover, .view-button:hover {
     background: #067cdc;
 }

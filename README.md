@@ -1,3 +1,38 @@
+# node_sample_projects
+
+Dependencies and modules:  express, mongoose, ejs, cors, jsonwebtoken, bcryptjs, node-fetch
+- Linguagem: JavaScript
+- Banco de Dados MongoDB (não precisa instalar banco de dados local se for instalar uma versão local desse app, ele está na nuvem em um cluster).
+- Arquitetura: MVC
+
+* Para rodar a aplicação acesse o diretório "sample_node_project02" e rode os seguintes comandos:
+
+1 - npm i ejs
+2 - npm i express
+3 - npm i node-fetch
+4 - npm i mongoose
+5 - npm i cors
+6 - npm i jsonwebtoken
+7 - npm i bcryptjs
+
+Para mais detalhes acerca do modulos e dependencias do projeto, favor acessar:
+package-lock.json
+package.json
+no diretótio principal
+
+Nota: O ambiente deve estar configurado para rodar projetos Node.js
+
+O ponto de entrada da aplicação é "app.js", você encontra este arquivo no diretório "src".
+
+Só precisa rodar o comando: node app ou nodemon app
+A aplicação poderá ser acessada em: http://localhost:5000/ 
+
+To do list:
+
+* Iterface responsiva. OBS: (se quiser ter uma noção de minhas habilidades em páginas responsivas, favor visitar: https://kesso.uk/search (meu atual projeto)).
+* Test unitários utilizando JEST.
+* Melhorar performance das requisições, evitar requisições desnecessárias de conteúdo.
+
 # Case - Técnico
 
 - Implementar uma aplicação client-side onde será encontrar todas as informações sobre as comics e characters da marvel;
@@ -31,8 +66,3 @@
 - Para melhorar segurança da aplicação sugerimos a utilização de JWT para a autenticação;
 - Sugerimos a utilização de um banco de dados relacional;
 - É obrigatório utilizar API com arquitetura REST.
-
-
-# node_sample_projects
-
-Dependencies and modules:  express, mongoose, ejs, cors, jsonwebtoken, bcryptjs, node-fetch

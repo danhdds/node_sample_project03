@@ -9,9 +9,7 @@ exports.signup = (req, res, callback) => {
         name: req.body.name,
         username: req.body.username,
         email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, 8),
-        comics: {},
-        characters: {}
+        password: bcrypt.hashSync(req.body.password, 8)
 
     });
 
