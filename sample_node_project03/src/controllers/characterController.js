@@ -7,5 +7,12 @@ exports.getMarvelCharacters = (req, res) => {
         //console.log(characters);
     });
     
+}
+
+exports.getMarvelCharacter = (req, res) => {
+
+    characterModel.getCharacter(req, function(character){
+        res.send({character});
+    });
 
 }

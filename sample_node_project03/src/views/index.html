@@ -4,6 +4,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap"
+            rel="stylesheet">
         <link rel="stylesheet" href="/public/css/main.css">
         <title>Comic characters Marvel App</title>
     </head>
@@ -11,39 +15,64 @@
 
         <div class="container">
 
-            <div class="login-wrap">
+            <header>
+                <div class="logo">
+                    <span>Simple Marvel App</span>
+                    <img src="/public/img/marvel.svg" alt="marvel image">
+                </div>
 
-                <form id="login-form" autocomplete="off">
+                <div class="main-nav">
+                    <nav>
+                        <ul>
+                            <li class="home">Home</li> <span>|</span>
+                            <li class="edit-user-info">Editar minhas iformações</li> <span>|</span>
+                            <li class="view-favorites">Visualisar favoritos</li> <span>|</span>
+                            <li class="log-out">Log out</li>
+                        </ul>
+                    </nav>
+                </div>
 
-                    <label for="loginUsername">Nome de usuário:</label><br>
-                    <input required type="text" name="loginUsername"><br>
-                    <label for="loginPassword">Senha:</label><br>
-                    <input required type="password" name="loginPassword"><br>
-                    <input type="submit" name="action" value="Log in" />
+            </header>
 
-                </form><!-- end form -->
+            <div class="main-content">
 
-            </div><!-- end sign-up -->
+                <div class="login-wrap">
 
-            <div class="sign-up-wrap">
+                    <form id="login-form" autocomplete="off">
 
-                <form id="sign-up-form" autocomplete="off">
-                    
-                    <label for="name">Nome:</label><br>
-                    <input required type="text" name="name" /><br>
+                        <label for="loginUsername">Nome de usuário:</label><br>
+                        <input required type="text" name="loginUsername"><br>
+                        <label for="loginPassword">Senha:</label><br>
+                        <input required type="password" name="loginPassword"><br>
+                        <input type="submit" name="action" value="Log in" />
+                    </form><!-- end form -->
 
-                    <label for="username">Nome de usuário:</label><br>
-                    <input required type="text" name="username"><br>
-                    <label required for="email">Email:</label><br>
-                    <input type="text" name="email"><br>
+                    <span>Criar nova conta</span>
 
-                    <label for="password">Senha:</label><br>
-                    <input required type="password" name="password"><br>
-                    <input type="submit" name="action" value="Criar novo usuário" />
+                </div><!-- end sign-up -->
 
-                </form><!-- end form -->
+                <div class="sign-up-wrap">
 
-            </div><!-- end sign-up -->
+                    <form id="sign-up-form" autocomplete="off">
+
+                        <label for="name">Nome:</label><br>
+                        <input required type="text" name="name" /><br>
+
+                        <label for="username">Nome de usuário:</label><br>
+                        <input required type="text" name="username"><br>
+                        <label required for="email">Email:</label><br>
+                        <input type="text" name="email"><br>
+
+                        <label for="password">Senha:</label><br>
+                        <input required type="password" name="password"><br>
+                        <input type="submit" name="action" value="Criar novo usuário"/>
+
+                    </form><!-- end form -->
+
+                </div><!-- end sign-up -->
+
+            </div>
+            <div style="clear: both;"></div>
 
         </div><!-- end container -->
 

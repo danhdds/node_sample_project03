@@ -12,15 +12,15 @@ params.append('ts', timeStamp);
 params.append('apikey', publicKey);
 params.append('hash', hash);
 
-exports.getCharacters = (callback) => {
+exports.getComics = (callback) => {
 
-    fetch('http://gateway.marvel.com/v1/public/characters?'+'ts='+timeStamp+'&apikey='+publicKey+'&hash='+hash)
+    fetch('http://gateway.marvel.com/v1/public/comics?'+'ts='+timeStamp+'&apikey='+publicKey+'&hash='+hash)
     .then(res => res.json())
     .then(json => callback(json.data.results));
 
 }
 
-exports.getCharacter = (req, callback) => {
+exports.getComic = (req, callback) => {
 
     fetch(req.body.url+'?ts='+timeStamp+'&apikey='+publicKey+'&hash='+hash)
     .then(res => res.json())
