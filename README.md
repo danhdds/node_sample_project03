@@ -26,6 +26,7 @@ O ponto de entrada da aplicação é "app.js", você encontra este arquivo no di
 
 Só precisa rodar o comando: node app ou nodemon app
 A aplicação poderá ser acessada em: http://localhost:5000/ 
+Ou visite: https://simple-marvel-app09.herokuapp.com/ para ver a aplicação rodando...
 
 To do list:
 
