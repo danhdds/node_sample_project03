@@ -3,6 +3,10 @@
 Dependencies and modules:  express, mongoose, ejs, cors, jsonwebtoken, bcryptjs, node-fetch
 - Linguagem: JavaScript
 - Banco de Dados MongoDB (não precisa instalar banco de dados local se for instalar uma versão local desse app, ele está na nuvem em um cluster).
+  Por que a escolha noSql: Como estamos manipulando basicamente objetos, fez todo o sentindo utilizar noSql, pois noSql em si tem esse design de modelo baseado em objetos(favor não confundir a semantica no sentindo de paradigma orientado a objetos... rsrs...), como não vi uma 
+  necessidade de criar relações mais complexas e robustas com as diferentes entidades manipuladas, escolhi noSql.
+  Os bancos de dados SQL são mais adequados para transações pesadas ou complexas porque são mais estáveis e garantem a integridade dos dados.
+  
 - Arquitetura: MVC
 
 * Para rodar este app, clone o projeto e rode os seguintes comandos no diretório principal:
