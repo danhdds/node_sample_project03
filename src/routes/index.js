@@ -3,8 +3,8 @@ authController = require('../controllers/authController.js');
 characterController = require('../controllers/characterController.js');
 comicControler = require('../controllers/comicController.js');
 
-const { verifySignUp } = require('../middlleware/index');
-const { authJwt } = require("../middlleware/index");
+const { verifySignUp } = require('../middlleware/index.js');
+const { authJwt } = require("../middlleware/index.js");
 
 exports.appRouter = router => {
 
