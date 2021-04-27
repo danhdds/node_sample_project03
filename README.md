@@ -14,7 +14,7 @@ Dependencies and modules:  express, mongoose, ejs, cors, jsonwebtoken, bcryptjs,
 1 - npm install
 2 - npm start
 
-Para mais detalhes acerca do modulos e dependencias do projeto, favor acessar:
+Para mais detalhes acerca das dependências da aplicação, favor acessar:
 package-lock.json
 package.json
 no diretótio principal
