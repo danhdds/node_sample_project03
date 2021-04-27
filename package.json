@@ -1,5 +1,5 @@
 {
-  "name": "sample Marvel App",
+  "name": "sample-Marvel-App",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,6 +9,10 @@
   },
   "author": "Danilo Abreu",
   "license": "ISC",
+  "engines": {
+    "node": ">=14.15.4",
+    "npm": ">=6.14.10"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
