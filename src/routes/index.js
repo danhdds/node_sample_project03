@@ -1,7 +1,7 @@
-usersController = require('../controllers/usersController');
-authController = require('../controllers/authController');
-characterController = require('../controllers/characterController');
-comicControler = require('../controllers/comicController');
+usersController = require('../controllers/usersController.js');
+authController = require('../controllers/authController.js');
+characterController = require('../controllers/characterController.js');
+comicControler = require('../controllers/comicController.js');
 
 const { verifySignUp } = require('../middlleware/index');
 const { authJwt } = require("../middlleware/index");

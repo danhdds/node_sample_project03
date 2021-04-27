@@ -1,5 +1,5 @@
-comicModel = require('../models/comicModel');
-userModel = require('../models/userModel');
+comicModel = require('../models/comicModel.js');
+userModel = require('../models/userModel.js');
 
 exports.getMarvelComics = (req, res) => {
 

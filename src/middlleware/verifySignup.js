@@ -1,5 +1,5 @@
 
-userModel = require('../models/userModel');
+userModel = require('../models/userModel.js');
 
 checkDuplicateUsernameOrEmail = (req, res, next) => {
 

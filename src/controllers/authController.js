@@ -1,7 +1,7 @@
-const authModel = require('../models/authModel');
+const authModel = require('../models/authModel.js');
 const bcrypt = require('bcryptjs');
 const jwt = require("jsonwebtoken");
-const config = require("../config/authConfig");
+const config = require("../config/authConfi.js");
 
 exports.singUpNewUserController = (req, res) => {
 

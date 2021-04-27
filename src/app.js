@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const bootstrap = require('./bootstrap');
+const bootstrap = require('./bootstrap.js');
 const cors = require('cors');
 
 const app = express();

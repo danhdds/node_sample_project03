@@ -1,4 +1,4 @@
-usersModel = require('../models/userModel');
+usersModel = require('../models/userModel.js');
 
 exports.renderMainUserPage = (req, res) => {
 
