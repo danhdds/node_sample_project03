@@ -25,6 +25,7 @@ Ou visite: https://simple-marvel-app09.herokuapp.com/ para ver a aplicação rod
 
 To do list:
 
+* Implementar a função desfavoritar
 * Iterface responsiva. OBS: (se quiser ter uma noção de minhas habilidades em páginas responsivas, favor visitar: https://kesso.uk/search (meu atual projeto)).
 * Test unitários utilizando JEST.
 * Melhorar performance das requisições, evitar requisições desnecessárias de conteúdo.
