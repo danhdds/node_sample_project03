@@ -5,15 +5,10 @@ Dependencies and modules:  express, mongoose, ejs, cors, jsonwebtoken, bcryptjs,
 - Banco de Dados MongoDB (não precisa instalar banco de dados local se for instalar uma versão local desse app, ele está na nuvem em um cluster).
 - Arquitetura: MVC
 
-* Para rodar a aplicação acesse o diretório "sample_node_project02" e rode os seguintes comandos:
+* Para rodar este app, clone o projeto e rode os seguintes comandos no diretório principal:
 
-1 - npm i ejs
-2 - npm i express
-3 - npm i node-fetch
-4 - npm i mongoose
-5 - npm i cors
-6 - npm i jsonwebtoken
-7 - npm i bcryptjs
+1 - npm install
+2 - npm start
 
 Para mais detalhes acerca do modulos e dependencias do projeto, favor acessar:
 package-lock.json
