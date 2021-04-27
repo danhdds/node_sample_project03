@@ -15,8 +15,9 @@ app.set('views', path.join(__dirname, '/views'));
 app.use(express.json()); // to support JSON-encoded bodies
 app.use(express.urlencoded({ extended: true })); // to support URL-encoded bodies
 
+// "http://localhost:5001" on local env
 var corsOptions = {
-    origin: "http://localhost:5001"
+    origin: null 
 };
 
 // set cors middlewares
