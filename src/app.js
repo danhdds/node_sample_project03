@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true })); // to support URL-encoded bodie
 
 // "http://localhost:5001" on local env
 var corsOptions = {
-    origin: null 
+    origin: "http://localhost:5001"
 };
 
 // set cors middlewares
