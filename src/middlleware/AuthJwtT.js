@@ -24,9 +24,9 @@ isUser = (req, res, next) => {
     userModel.isValidUser(req, res, next);
 };
 
-const authJwt = {
+const AuthJwt = {
     verifyToken,
     isUser
 };
 
-module.exports = authJwt;
+module.exports = AuthJwt;
