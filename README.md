@@ -36,6 +36,7 @@ To do list:
 * Melhorar performance das requisições, evitar requisições desnecessárias de conteúdo;
 * Excluir conta do usuário
 * Excluir favoritos/ Characters ou Comics
+* Descentralizar roteador, granularizar para melhor manutenabilidade
 
 # Case - Técnico
 
