@@ -23,7 +23,7 @@ exports.appRouter = router => {
         [authJwt.verifyToken],
         usersController.editUser);
 
-    router.post('/edit-user',
+    router.put('/edit-user',
         [authJwt.verifyToken],
         usersController.upateUser);
 

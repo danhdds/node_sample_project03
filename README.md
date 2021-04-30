@@ -34,6 +34,8 @@ To do list:
 * Iterface responsiva. OBS: (se quiser ter uma noção de minhas habilidades em páginas responsivas, favor visitar: https://kesso.uk/search (meu atual projeto));
 * Test unitários utilizando JEST;
 * Melhorar performance das requisições, evitar requisições desnecessárias de conteúdo;
+* Excluir conta do usuário
+* Excluir favoritos/ Characters ou Comics
 
 # Case - Técnico
 

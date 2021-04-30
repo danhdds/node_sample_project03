@@ -366,7 +366,7 @@ const updateUser = (event) => {
     let url = '/edit-user';
 
     $.ajax({
-        type: "POST",
+        type: "PUT",
         url: url,
         data: body,
         dataType: "json",
