@@ -31,7 +31,7 @@ To do list:
 
 * Implementar a função desfavoritar;
 * Comentar partes pertinentes do código;
-* Iterface responsiva. OBS: (se quiser ter uma noção de minhas habilidades em páginas responsivas, favor visitar: https://kesso.uk/search (meu atual projeto));
+* Iterface responsiva. OBS: (se quiser ter uma noção de minhas habilidades em páginas responsivas, favor visitar: https://kesso.uk/find-a-tutor (meu atual projeto));
 * Test unitários utilizando JEST;
 * Melhorar performance das requisições, evitar requisições desnecessárias de conteúdo;
 * Excluir conta do usuário
